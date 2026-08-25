@@ -491,6 +491,7 @@ html[data-theme="dark"] .hero-badge {
   border-radius: 0.12em;
   padding: 0.02em 0.15em 0.08em;
   transform: skew(-6deg);
+  white-space: nowrap;
 }
 
 .hero-title {
@@ -536,6 +537,11 @@ html[data-theme="dark"] .hero-badge {
   padding: 0.4rem 0.95rem;
   box-shadow: 0 8px 20px var(--shadow);
   animation: chip-float 5s ease-in-out infinite;
+}
+
+html[data-theme="dark"] .hero-chip {
+  background: #232320;
+  border-color: #4A4A44;
 }
 
 .chip-1 {
@@ -1243,7 +1249,7 @@ html[data-theme="dark"] .about-photo-wrap {
 
 @media (max-width: 640px) {
   .hero-title {
-    font-size: clamp(2.4rem, 11.5vw, 8.5rem);
+    font-size: clamp(2.2rem, 10.5vw, 8.5rem);
   }
 
   .hero-chip {
