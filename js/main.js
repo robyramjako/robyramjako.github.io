@@ -20,7 +20,7 @@ const themeMeta = document.querySelector('meta[name="theme-color"]')
 
 const applyThemeColor = () => {
   if (themeMeta) {
-    themeMeta.content = document.documentElement.dataset.theme === "dark" ? "#101010" : "#FAFAF7"
+    themeMeta.content = document.documentElement.dataset.theme === "dark" ? "#14130e" : "#f5f3ee"
   }
 }
 
