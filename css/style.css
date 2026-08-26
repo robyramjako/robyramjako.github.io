@@ -177,13 +177,15 @@ section {
 }
 
 .btn-invert:hover {
-  background: var(--accent-text);
-  color: #fff;
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--dark);
 }
 
-.btn-invert .btn-arrow {
-  background: var(--accent);
-  color: var(--accent-ink);
+.btn-invert:hover .btn-arrow {
+  background: var(--dark);
+  color: #fff;
+  border: 2px solid var(--dark)
 }
 
 .btn-arrow {
@@ -625,7 +627,7 @@ html[data-theme="dark"] .hero-chip {
   font-size: clamp(1.15rem, 2.5vw, 1.5rem);
   letter-spacing: 0.02em;
   color: var(--hero-ink);
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 2px;
   text-underline-offset: 7px;
   transition: color 0.2s ease;
@@ -633,6 +635,10 @@ html[data-theme="dark"] .hero-chip {
 
 .hero-link:hover {
   color: var(--accent-text);
+}
+
+.link-text{
+  text-decoration: underline;
 }
 
 .link-arrow {
