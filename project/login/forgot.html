@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lupa Password — Project 01 Roby Ramjako</title>
+  <meta name="description" content="Halaman lupa password demo kaca, dibuat dengan HTML, CSS, dan JavaScript murni.">
+  <meta name="theme-color" content="#e9edf2">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234f46e5'/><circle cx='50' cy='38' r='16' fill='white'/><path d='M20 82c4-18 16-26 30-26s26 8 30 26' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true"></div>
+
+  <div class="login-wrap">
+    <a class="brand-mini" href="../../projects.html">Roby<span>+</span></a>
+
+  <main class="card" id="card">
+    <h1>Lupa password?</h1>
+    <p class="sub">Isi email atau username akunmu.</p>
+
+    <form id="forgotForm" novalidate>
+      <div class="field">
+        <label for="identity">Email atau username</label>
+        <div class="input-wrap">
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <input
+            type="text"
+            id="identity"
+            name="identity"
+            placeholder="nama@email.com / username"
+            autocomplete="username"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            aria-describedby="identityError"
+            aria-invalid="false"
+          >
+        </div>
+        <p class="error" id="identityError" aria-live="polite"></p>
+        <p class="hint">Demi keamanan, pesannya selalu sama walau akun tidak ada.</p>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn" disabled>
+        <span class="btn-text">Kirim link reset</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+    </form>
+
+    <div id="sentState" hidden>
+      <p class="notice">Kalau akun terdaftar, link reset sudah dikirim (simulasi demo, tidak ada email beneran).</p>
+      <a href="index.html" class="btn-secondary">Kembali masuk</a>
+    </div>
+
+    <p class="auth-switch" id="backLink">Ingat passwordnya? <a href="index.html" class="text-link">Masuk</a></p>
+  </main>
+  </div>
+
+  <script src="forgot.js"></script>
+</body>
+</html>
